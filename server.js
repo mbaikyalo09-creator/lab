@@ -1,14 +1,9 @@
 const express = require('express');
+const path = require('path');
 
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send(`
-        <h1>Imara Women's Loan</h1>
-        <p>Welcome to the FinaSwift Demo Project.</p>
-        <button>Pay with M-Pesa</button>
-    `);
-});
+app.use(express.static('public'));
 
 const PORT = process.env.PORT || 3000;
 
